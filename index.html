@@ -70,10 +70,10 @@ body {
 <div class="login">
   <div class="form">
     <form class="login-form">
-      <span class="material-icons">lock</span>
+      <span class="material-icons">gen</span>
       <input id="usr" type="text" placeholder="Username" required/>
       <input id="pwd" type="password" placeholder="Password" required />
-      <button id="btn" type="button">login</button>
+      <button id="btn" type="button">Generate</button>
     </form>  
   </div>
 </div>
@@ -86,4 +86,6 @@ body {
   var login = MD5(MD5(usr) + ":" + MD5(pwd));
   navigator.clipboard.writeText(login);
   alert("Text Copied to Clipboard");}
+  document.getElementById('usr').value = "";
+  document.getElementById('pwd').value = "";
 </script>
