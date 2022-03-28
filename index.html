@@ -84,6 +84,7 @@ body {
   var usr = document.getElementById('usr').value;
   var pwd = document.getElementById('pwd').value;
   var login = MD5(MD5(usr) + ":" + MD5(pwd));
+  login = MD5(login);
   navigator.clipboard.writeText(login);
   alert("Text Copied to Clipboard");}
   document.getElementById('usr').value = "";
